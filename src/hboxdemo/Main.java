@@ -18,8 +18,12 @@ public class Main extends Application {
         button = new Button(); //Create a new button
         button.setText("Click Me"); //Set the text of the button
         label = new Label("This is Label"); //Create a label with text specified
+
         root = new HBox(); //Create a HBox using No-arg constructor
-        root.getChildren().addAll(button, label);
+        root.getChildren().addAll(label, button); //add child nodes in the hbox
+        root.setSpacing(20); //set spacing of HBox
+        Scene scene = new Scene(root,400,200); //Create scene
+        primaryStage.setScene(scene); //set the scene on stage
         primaryStage.setTitle("Hello World");
         primaryStage.show();
     }
